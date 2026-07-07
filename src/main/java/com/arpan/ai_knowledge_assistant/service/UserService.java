@@ -23,7 +23,8 @@ public class UserService {
         User user = User.builder()
                 .fullName(request.getFullName())
                 .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword())) // We'll hash this later with BCrypt
+                .password(passwordEncoder.encode(request.getPassword()))// We'll hash this later with BCrypt
+                .role("USER")
                 .build();
 
         User saved = userRepository.save(user);
@@ -31,6 +32,7 @@ public class UserService {
                 .id(saved.getId())
                 .username(saved.getFullName())
                 .email(saved.getEmail())
+                .password(saved.getPassword())
                 .build();
 
         return response;

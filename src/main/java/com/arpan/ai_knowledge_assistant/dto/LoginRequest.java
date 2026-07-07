@@ -1,14 +1,18 @@
 package com.arpan.ai_knowledge_assistant.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class UserResponse {
+public class LoginRequest {
 
-    private Long id;
-    private String username;
+    @Email
+    @NotBlank
     private String email;
+
+    @NotBlank
     private String password;
 }
