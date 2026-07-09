@@ -19,7 +19,7 @@ spring:
     show-sql: true
 
 jwt:
-  secret: VGhpc0lzQVN1cGVyU2VjcmV0S2V5Rm9ySldUSFM1Ng==
+  secret: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
   expiration: 3600000
 
 server:
